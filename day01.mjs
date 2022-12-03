@@ -15,6 +15,14 @@ function part1() {
 }
 
 function part2() {
+  const values = allelves.map((elf) => {
+  const values = elf.split('\n').map(Number);
+  return values.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+  });
+
+  values.sort((a, b) => b - a);
+  const sumtopthree = values.slice(0,3).reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+  console.log(sumtopthree);
 }
 
 part1();
